@@ -9,6 +9,8 @@ namespace Microsoft.EntityFrameworkCore.InMemory.FunctionalTests
 {
     public class TestLoggerFactory : ILoggerFactory
     {
+        public static readonly TestLoggerFactory Instance = new TestLoggerFactory();
+
         public static ITestOutputHelper TestOutputHelper;
 
         private readonly TestLogger _logger = new TestLogger();
